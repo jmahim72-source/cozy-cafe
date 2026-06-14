@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Hearth Café | Where every cup tells a story</title>
+    <meta name="description" content="Experience the warm, inviting atmosphere of The Cozy Hearth Café. Handcrafted coffees, freshly baked pastries, and a welcoming community space. Book a table today.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                <span class="logo-text">The Cozy Hearth</span>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#reserve" class="nav-link">Reserve</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(61, 34, 20, 0.6), rgba(61, 34, 20, 0.7)), url('assets/hero_bg.png');"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Welcome to The Cozy Hearth</span>
+            <h1 class="hero-title">Where every cup tells a story</h1>
+            <p class="hero-description">Nestled in the heart of town, we blend artisan coffee, freshly baked sourdough pastries, and warm conversations in a comfortable hearthside setting.</p>
+            <div class="hero-ctas">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reserve" class="btn btn-secondary">Reserve a Table</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#about" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="assets/about_barista.png" alt="Barista pouring hand-drip coffee" class="about-img">
+                    <div class="about-experience-badge">
+                        <span class="years">Est.</span>
+                        <span class="label">2018</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2 class="section-title">Crafted with Love & Heart</h2>
+                    <p class="about-text">
+                        The Cozy Hearth began with a simple dream: to create a space that feels like a warm hug. Founded by coffee enthusiast Clara Vance, our cafe is built on the belief that a great cup of coffee has the power to bring people together, spark inspiration, and offer a moment of pure comfort in a busy world.
+                    </p>
+                    <p class="about-text">
+                        We roast our coffee in small batches, bake our pastries fresh every single morning, and curate an environment where you can slow down, read a book, or catch up with an old friend.
+                    </p>
+                    
+                    <!-- Values -->
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="value-info">
+                                <h3>Locally Sourced</h3>
+                                <p>Partnering with nearby organic farms for fresh milk, eggs, and seasonal ingredients.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+                            <div class="value-info">
+                                <h3>Handcrafted with Love</h3>
+                                <p>Every single pour, shot, and pastry is meticulously prepared by our expert baristas.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="value-info">
+                                <h3>Community First</h3>
+                                <p>Providing a welcoming hub for book clubs, local artists, and neighbors alike.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section section-padding" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Delightful Offerings</span>
+                <h2 class="section-title">Explore Our Cozy Menu</h2>
+                <p class="section-desc">From aromatic freshly-ground coffee to artisanal snacks and divine home-style desserts.</p>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="all">All Items</button>
+                <button class="tab-btn" data-category="coffee">Coffee</button>
+                <button class="tab-btn" data-category="food">Food</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+                <!-- Coffee 1 -->
+                <div class="menu-card" data-category="coffee">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/menu_latte.png" alt="Signature Lavender Latte" class="menu-card-img">
+                        <span class="menu-item-tag">Signature</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Signature Lavender Latte</h3>
+                            <span class="menu-item-price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Double espresso infused with organic lavender syrup, steamed milk, and a touch of local honey.</p>
+                    </div>
+                </div>
+
+                <!-- Coffee 2 -->
+                <div class="menu-card" data-category="coffee">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/about_barista.png" alt="Classic Pour-Over" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Classic Pour-Over</h3>
+                            <span class="menu-item-price">$4.50</span>
+                        </div>
+                        <p class="menu-item-desc">Single-origin beans freshly ground and slow-dripped to bring out subtle floral and chocolate notes.</p>
+                    </div>
+                </div>
+
+                <!-- Coffee 3 -->
+                <div class="menu-card" data-category="coffee">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/hero_bg.png" alt="Hearthside Cappuccino" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Hearthside Cappuccino</h3>
+                            <span class="menu-item-price">$4.75</span>
+                        </div>
+                        <p class="menu-item-desc">Rich espresso topped with a thick layer of velvety milk foam and a light dusting of organic cinnamon.</p>
+                    </div>
+                </div>
+
+                <!-- Food 1 -->
+                <div class="menu-card" data-category="food">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/gallery_3.png" alt="Rustic Avocado Toast" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Rustic Avocado Toast</h3>
+                            <span class="menu-item-price">$10.50</span>
+                        </div>
+                        <p class="menu-item-desc">Crusty artisan sourdough bread topped with mashed avocado, cherry tomatoes, feta cheese, and microgreens.</p>
+                    </div>
+                </div>
+
+                <!-- Food 2 -->
+                <div class="menu-card" data-category="food">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/menu_croissant.png" alt="Warm Butter Croissant" class="menu-card-img">
+                        <span class="menu-item-tag">Freshly Baked</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Warm Butter Croissant</h3>
+                            <span class="menu-item-price">$4.25</span>
+                        </div>
+                        <p class="menu-item-desc">Flaky, multi-layered French pastry served warm with organic butter and house-made mixed berry jam.</p>
+                    </div>
+                </div>
+
+                <!-- Food 3 -->
+                <div class="menu-card" data-category="food">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/gallery_1.png" alt="Cozy Breakfast Panini" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Cozy Breakfast Panini</h3>
+                            <span class="menu-item-price">$11.75</span>
+                        </div>
+                        <p class="menu-item-desc">Grilled sourdough ciabatta filled with free-range eggs, smoked turkey breast, Swiss cheese, and herb aioli.</p>
+                    </div>
+                </div>
+
+                <!-- Dessert 1 -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/menu_tart.png" alt="Raspberry Chocolate Tart" class="menu-card-img">
+                        <span class="menu-item-tag">Popular</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Raspberry Chocolate Tart</h3>
+                            <span class="menu-item-price">$6.50</span>
+                        </div>
+                        <p class="menu-item-desc">Decadent Belgian dark chocolate ganache in a crisp cocoa pastry shell, topped with fresh, plump raspberries.</p>
+                    </div>
+                </div>
+
+                <!-- Dessert 2 -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/gallery_2.png" alt="Warm Pecan Pie" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Warm Pecan Pie</h3>
+                            <span class="menu-item-price">$7.25</span>
+                        </div>
+                        <p class="menu-item-desc">Classic buttery pecan pie with a flaky crust, served warm and topped with a scoop of premium vanilla bean gelato.</p>
+                    </div>
+                </div>
+
+                <!-- Dessert 3 -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image-wrapper">
+                        <img src="assets/menu_latte.png" alt="Honey Lavender Scone" class="menu-card-img">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-name">Honey Lavender Scone</h3>
+                            <span class="menu-item-price">$4.00</span>
+                        </div>
+                        <p class="menu-item-desc">Crumbly, sweet scone infused with culinary lavender buds and drizzled with a local honey glaze.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section section-padding" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Visual Solace</span>
+                <h2 class="section-title">Cozy Moments Captured</h2>
+                <p class="section-desc">Take a visual tour through our warm corners, sensory textures, and happy visitors.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <img src="assets/gallery_1.png" alt="A cozy reading nook corner with books and velvet armchair" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        <span class="gallery-title">Cozy Reading Nook</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="assets/gallery_2.png" alt="Artisanal espresso shot pouring from portafilter" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        <span class="gallery-title">Barista Craftsmanship</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="assets/gallery_3.png" alt="Friends laughing and sharing coffee around wood table" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        <span class="gallery-title">Shared Moments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reserve-section section-padding" id="reserve">
+        <div class="reserve-bg-tint"></div>
+        <div class="container">
+            <div class="reserve-wrapper">
+                <div class="reserve-form-container">
+                    <span class="section-subtitle text-center">Save Your Table</span>
+                    <h2 class="section-title text-center">Make a Reservation</h2>
+                    <p class="reserve-intro text-center">Whether it's a cozy morning read, a brunch date, or an afternoon work session, we'll keep a spot warm for you.</p>
+                    
+                    <form class="reserve-form" id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guestName"><i class="fa-regular fa-user"></i> Full Name</label>
+                                <input type="text" id="guestName" name="name" required placeholder="e.g. John Doe">
+                            </div>
+                        </div>
+                        <div class="form-row split">
+                            <div class="form-group">
+                                <label for="reserveDate"><i class="fa-regular fa-calendar"></i> Date</label>
+                                <input type="date" id="reserveDate" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reserveTime"><i class="fa-regular fa-clock"></i> Time</label>
+                                <input type="time" id="reserveTime" name="time" required>
+                            </div>
+                        </div>
+                        <div class="form-row split">
+                            <div class="form-group">
+                                <label for="guestsCount"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                                <select id="guestsCount" name="guests" required>
+                                    <option value="" disabled selected>Select count</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6+ People (Contact us)</option>
+                                </select>
+                            </div>
+                            <div class="form-group flex-end">
+                                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                                    <span class="btn-text">Confirm Booking</span>
+                                    <span class="spinner-icon hidden"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Trust Section -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Guest Testimonials</span>
+                <h2 class="section-title">Loved by Our Community</h2>
+                <p class="section-desc">Here is what our regulars say about their time spent at the Hearthside.</p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-quote">"The Cozy Hearth is my absolute sanctuary. The lavender latte is masterfully balanced, and the ambient fire sound and warm scent make it the perfect place to write."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Clara Mendonza</h4>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-quote">"Incredible sourdough croissants! Flaky, butter-rich, and served warm. You can feel the craftsmanship and community care in every corner. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Ethan Hunt</h4>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-quote">"Excellent service, cozy vibes, and fast Wi-Fi. It feels like your own living room but with a world-class barista serving you. It's a staple of our neighborhood."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Jenkins</h4>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Reviews Badge -->
+            <div class="google-badge-wrapper">
+                <div class="google-reviews-badge">
+                    <div class="badge-header">
+                        <div class="google-logo">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.85z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.85c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            <span>Google</span>
+                        </div>
+                        <div class="badge-rating">
+                            <span class="rating-num">4.9</span>
+                            <div class="stars-gold">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="badge-footer">
+                        <span>Based on 340+ local reviews</span>
+                        <a href="https://google.com" target="_blank" rel="noopener" class="write-review-btn">Write a Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Find Us Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info">
+                    <span class="section-subtitle">Find Us</span>
+                    <h2 class="section-title">Drop by the Hearth</h2>
+                    <p class="contact-intro">Whether you're picking up a morning roast, meeting friends, or hosting a creative meetup, here is how you can find and contact us.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="detail-text">
+                                <h3>Our Address</h3>
+                                <p>128 Maplewood Avenue, Hearthside District, NY 10012</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="detail-text">
+                                <h3>Phone & Bookings</h3>
+                                <p><a href="tel:+12125550199">+1 (212) 555-0199</a></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="detail-text">
+                                <h3>WhatsApp Quick Chat</h3>
+                                <p><a href="https://wa.me/12125550199" target="_blank" rel="noopener" class="whatsapp-link">Message us on WhatsApp <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="detail-text">
+                                <h3>Opening Hours</h3>
+                                <ul class="hours-list">
+                                    <li><span>Monday – Friday</span> <span>7:00 AM – 7:00 PM</span></li>
+                                    <li><span>Saturday</span> <span>8:00 AM – 8:00 PM</span></li>
+                                    <li><span>Sunday</span> <span>8:00 AM – 6:00 PM</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Column -->
+                <div class="contact-map">
+                    <div class="map-container">
+                        <!-- Custom Sepia Filtered Embedded Google Map Placeholder -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.4738597022877!2d-73.99824632402634!3d40.729606871391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259902c2e0b57%3A0x889816a70e7e1ef0!2sWashington%20Square%20Park!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="The Cozy Hearth Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Info -->
+                <div class="footer-col footer-about">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                        <span class="logo-text">The Cozy Hearth</span>
+                    </a>
+                    <p class="footer-desc">Where warm light, fresh aromas, and great neighbors blend together. Experience artisan craft and community hospitality.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Follow us on Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#gallery">Atmosphere Gallery</a></li>
+                        <li><a href="#reserve">Table Bookings</a></li>
+                        <li><a href="#contact">Contact & Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Summary -->
+                <div class="footer-col footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> 128 Maplewood Avenue, NY 10012</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (212) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope"></i> hello@thecozyhearth.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Cozy Hearth Café. All rights reserved. Made with love for the neighborhood.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS & PORTALS -->
+
+    <!-- Gallery Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image gallery lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage" class="lightbox-img">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="confirmation-modal-overlay" id="confirmModalOverlay" role="dialog" aria-modal="true">
+        <div class="confirmation-modal">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-body text-center">
+                <div class="success-icon-wrapper">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check animate-bounce"></i></div>
+                </div>
+                <h3 class="modal-title">Booking Confirmed!</h3>
+                <p class="modal-subtitle">We have reserved a cozy table for you.</p>
+                
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="label">Reserved For:</span>
+                        <span class="value" id="summaryName">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Date:</span>
+                        <span class="value" id="summaryDate">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Time:</span>
+                        <span class="value" id="summaryTime">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Guests:</span>
+                        <span class="value" id="summaryGuests">-</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <p class="modal-disclaimer"><i class="fa-solid fa-circle-info"></i> A confirmation has also been prepared for your record. See you soon!</p>
+                    <button class="btn btn-primary" id="modalDismissBtn">Perfect, see you then!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
