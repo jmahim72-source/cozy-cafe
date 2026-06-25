@@ -18,3 +18,10 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Node dependencies
+node_modules/
+
+# Local databases
+data/*.json
+

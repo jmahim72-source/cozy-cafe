@@ -140,6 +140,9 @@
                             <span class="menu-item-price">$5.50</span>
                         </div>
                         <p class="menu-item-desc">Double espresso infused with organic lavender syrup, steamed milk, and a touch of local honey.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Signature Lavender Latte" data-price="5.50"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -154,6 +157,9 @@
                             <span class="menu-item-price">$4.50</span>
                         </div>
                         <p class="menu-item-desc">Single-origin beans freshly ground and slow-dripped to bring out subtle floral and chocolate notes.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Classic Pour-Over" data-price="4.50"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -168,6 +174,9 @@
                             <span class="menu-item-price">$4.75</span>
                         </div>
                         <p class="menu-item-desc">Rich espresso topped with a thick layer of velvety milk foam and a light dusting of organic cinnamon.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Hearthside Cappuccino" data-price="4.75"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -182,6 +191,9 @@
                             <span class="menu-item-price">$10.50</span>
                         </div>
                         <p class="menu-item-desc">Crusty artisan sourdough bread topped with mashed avocado, cherry tomatoes, feta cheese, and microgreens.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Rustic Avocado Toast" data-price="10.50"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -197,6 +209,9 @@
                             <span class="menu-item-price">$4.25</span>
                         </div>
                         <p class="menu-item-desc">Flaky, multi-layered French pastry served warm with organic butter and house-made mixed berry jam.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Warm Butter Croissant" data-price="4.25"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -211,6 +226,9 @@
                             <span class="menu-item-price">$11.75</span>
                         </div>
                         <p class="menu-item-desc">Grilled sourdough ciabatta filled with free-range eggs, smoked turkey breast, Swiss cheese, and herb aioli.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Cozy Breakfast Panini" data-price="11.75"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -226,6 +244,9 @@
                             <span class="menu-item-price">$6.50</span>
                         </div>
                         <p class="menu-item-desc">Decadent Belgian dark chocolate ganache in a crisp cocoa pastry shell, topped with fresh, plump raspberries.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Raspberry Chocolate Tart" data-price="6.50"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -240,6 +261,9 @@
                             <span class="menu-item-price">$7.25</span>
                         </div>
                         <p class="menu-item-desc">Classic buttery pecan pie with a flaky crust, served warm and topped with a scoop of premium vanilla bean gelato.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Warm Pecan Pie" data-price="7.25"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -254,6 +278,9 @@
                             <span class="menu-item-price">$4.00</span>
                         </div>
                         <p class="menu-item-desc">Crumbly, sweet scone infused with culinary lavender buds and drizzled with a local honey glaze.</p>
+                        <div class="menu-card-footer">
+                            <button class="btn-add-to-cart" data-name="Honey Lavender Scone" data-price="4.00"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -589,6 +616,110 @@
                 <div class="modal-footer">
                     <p class="modal-disclaimer"><i class="fa-solid fa-circle-info"></i> A confirmation has also been prepared for your record. See you soon!</p>
                     <button class="btn btn-primary" id="modalDismissBtn">Perfect, see you then!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Badge Button -->
+    <div class="floating-cart" id="floatingCartBtn" aria-label="Open your shopping cart">
+        <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-shopping-basket"></i>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+        </div>
+        <span class="cart-label">My Cart</span>
+    </div>
+
+    <!-- Cart Drawer (Sidebar Modal) -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay" role="dialog" aria-modal="true" aria-label="Your Cart Drawer">
+        <div class="cart-drawer">
+            <div class="cart-drawer-header">
+                <h3><i class="fa-solid fa-mug-hot"></i> Your Cozy Order</h3>
+                <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close cart">&times;</button>
+            </div>
+            
+            <div class="cart-drawer-body">
+                <!-- Cart Items Container -->
+                <div class="cart-items-container" id="cartItemsContainer">
+                    <!-- Empty state by default -->
+                    <div class="cart-empty-state">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <p>Your cart is empty.</p>
+                        <p class="subtitle">Add handcrafted treats from our menu!</p>
+                    </div>
+                </div>
+                
+                <!-- Order Total & Checkout Section -->
+                <div class="cart-summary-section hidden" id="cartSummarySection">
+                    <div class="cart-total-row">
+                        <span>Subtotal</span>
+                        <span class="cart-total-value" id="cartSubtotal">$0.00</span>
+                    </div>
+                    
+                    <form class="checkout-form" id="checkoutForm">
+                        <div class="form-group">
+                            <label for="customerName"><i class="fa-regular fa-user"></i> Your Name</label>
+                            <input type="text" id="customerName" name="customerName" required placeholder="e.g. John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryType"><i class="fa-solid fa-map-pin"></i> Order Type</label>
+                            <select id="deliveryType" name="deliveryType" required>
+                                <option value="dine-in" selected>Dine-In (At Table)</option>
+                                <option value="takeaway">Takeaway (Pickup)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="tableNumberGroup">
+                            <label for="tableNumber"><i class="fa-solid fa-chair"></i> Table Number</label>
+                            <input type="number" id="tableNumber" name="tableNumber" min="1" max="25" placeholder="e.g. 5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderNotes"><i class="fa-regular fa-comment-dots"></i> Special Notes</label>
+                            <textarea id="orderNotes" name="orderNotes" placeholder="e.g. Extra hot, oat milk, sugar-free..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="placeOrderBtn">
+                            <span class="btn-text">Place Order</span>
+                            <span class="spinner-icon hidden"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="confirmation-modal-overlay" id="orderConfirmModalOverlay" role="dialog" aria-modal="true">
+        <div class="confirmation-modal">
+            <button class="modal-close" id="orderModalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-body text-center">
+                <div class="success-icon-wrapper">
+                    <div class="success-icon order-success"><i class="fa-solid fa-mug-hot animate-pulse"></i></div>
+                </div>
+                <h3 class="modal-title">Order Received!</h3>
+                <p class="modal-subtitle">Our baristas are preparing your treats with care.</p>
+                
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="label">Order ID:</span>
+                        <span class="value" id="orderSummaryId" style="font-weight: bold; color: var(--color-primary);">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Customer:</span>
+                        <span class="value" id="orderSummaryName">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Type:</span>
+                        <span class="value" id="orderSummaryType">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Total Paid:</span>
+                        <span class="value" id="orderSummaryTotal">-</span>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <p class="modal-disclaimer"><i class="fa-solid fa-circle-info"></i> Please wait at your table or counter. Your order details are saved.</p>
+                    <button class="btn btn-primary" id="orderDismissBtn">Sounds delicious!</button>
                 </div>
             </div>
         </div>

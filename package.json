@@ -1,0 +1,16 @@
+{
+  "name": "cozy-cafe",
+  "version": "1.0.0",
+  "description": "Static frontend-only Cozy Cafe website with WhatsApp reservation and ordering",
+  "scripts": {
+    "start": "npx -y serve .",
+    "dev": "npx -y serve ."
+  },
+  "keywords": [
+    "cozy-cafe",
+    "static",
+    "whatsapp-ordering"
+  ],
+  "author": "",
+  "license": "ISC"
+}
